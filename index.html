@@ -6,9 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript Lab</title>
+    <style type="text/css" media="all">
+      *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+        font-weight: 500; 
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* padding: 10px; */
+      }
+      label{
+        border-radius: 10px;
+      }
+      input{
+        right: 2rem;
+        border-radius: 5px;
+        padding: 10px;
+        border: solid .5px gray;
+      }
+      #submit {
+        width: 100px;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        color: white;
+        background-color: green;
+      }
+    </style>
   </head>
 
   <body>
+    <form action="http://localhost:3000/users" method="POST">
+      <label>User Name: <input type="text" id="name" name="name" placeholder="Input your name"/></label><br/>
+      <label >Email: <input type="text" id="email" email="email" placeholder="Input your email"/></label><br/>
+      <input type="submit" id="submit" value="Submit"/><br/>
+    </form>
     <script src="index.js"></script>
   </body>
 
